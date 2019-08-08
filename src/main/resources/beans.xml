@@ -29,7 +29,7 @@
     <!--配置声明式事务-->
     <tx:advice id="transactionInterceptor" transaction-manager="dataSourceTransactionManager">
         <tx:attributes>
-            <tx:method name="insert"/>
+            <tx:method name="ins*" propagation="NESTED"/>
         </tx:attributes>
     </tx:advice>
 
