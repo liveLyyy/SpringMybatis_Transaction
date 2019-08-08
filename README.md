@@ -83,3 +83,19 @@
 >>6.2.3、READ_COMMITTED （读已提交）：保证一个事务修改的数据提交后才能被另外一个事务读取，另外一个事务不能读取该事务未提交的数据。这种事务隔离级别可以避免脏读出现，但是可能会出现不可重复读和幻像读。<br>
 >>6.2.4、REPEATABLE_READ （可重复读）： 这种事务隔离级别可以防止脏读、不可重复读，但是可能出现幻像读。它除了保证一个事务不能读取另一个事务未提交的数据外，还保证了不可重复读。<br>
 >>6.2.5、SERIALIZABLE（串行化）：这是花费最高代价但是最可靠的事务隔离级别，事务被处理为顺序执行。除了防止脏读、不可重复读外，还避免了幻像读。<br>
+
+7、[spring常用注解](https://mp.weixin.qq.com/s?src=11&timestamp=1565255067&ver=1777&signature=eYtegbVy7CpCXP4OKToeLTnKuO6iWZgA64nzAKH1z3SX9Mrc8-tC1IBl6hMFSjZSZDuZRmgLPO*ESYqnzqHlflotX17LvIN*nflpyl7GWw5feJ7eNwCBrXRF3RVaB*gc&new=1)<br>
+>7.1、@Component：@Component是所有受Spring 管理组件的通用形式，@Component注解可以放在类的头上，@Component不推荐使用。创建类对象，相当于配置<br>
+>7.2、@Service：：与@Component功能相同，写在serviceImpl类上<br>
+>7.3、@Repository:与@Component功能相同，建议写在数据访问层<br>
+>7.4、@Controller：与@Component功能相同，建议写在控制器上<br>
+>7.5、@Autowired：@Autowired顾名思义，就是自动装配，其作用是为了消除代码Java代码里面的getter/setter与bean属性中的property。当然，getter看个人需求，如果私有属性需要对外提供的话，应当予以保留。@Autowired默认按类型匹配的方式，在容器查找匹配的Bean，当有且仅有一个匹配的Bean时，Spring将其注入@Autowired标注的变量中。<br>
+>7.6、@Resource：@Resource注解与@Autowired注解作用非常相似<br>
+>7.7、@Value()获取properties文件中的内容<br>
+>7.8、@Pointcut()定义切点<br>
+>7.9、@Aspect：定义切点<br>
+>7.10、@Before前置通知<br>
+>7.11、@After后置通知<br>
+>7.12、@AfterReturning后置通知，必须切点正确执行<br>
+>7.13、@AfterThrowing异常通知<br>
+>7.14、@Arround环绕通知<br>
